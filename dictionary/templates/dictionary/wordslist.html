@@ -1,0 +1,21 @@
+{% extends "./_base.html" %}
+{% block content %}
+
+<table class="words_list">
+    <tr>
+        <th>Key</th>
+        <th>Value</th>
+    </tr>
+    {% for k, v in words %}
+            <tr>
+                <td>{{ k }}</td>
+                <td>{{ v }}</td>
+            </tr>
+        {% endfor %}  
+</table>
+
+<div class="links">
+    <a href="{% url 'add_word' %}">Add word</a>
+</div>
+
+{% endblock content%}
